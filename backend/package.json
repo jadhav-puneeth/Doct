@@ -5,7 +5,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "install-backend" : "cd backend && npm install",
+    "start-backend" : "cd frontend && node app.js",
+    "install-frontend" : "cd frontend && npm install",
+    "build-frontend" : "cd frontend && npm run build",
+    "start-frontend" : "cd frontend && npm run start"
   },
   "keywords": [],
   "author": "",

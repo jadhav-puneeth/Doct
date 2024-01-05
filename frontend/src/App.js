@@ -23,6 +23,7 @@ const App = () => {
   const user = localStorage.getItem("token");
   const [bookingData , setBookingData] = useState([])
   const url = "http://localhost:5000/api/bookings"
+  // const url = "https://doctor-booking-1m82.onrender.com"
   const fetchInfo = () => {
     return fetch(url)
       .then((res) => res.json())
