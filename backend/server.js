@@ -10,9 +10,9 @@ const app = express();
 
 app.use(express.json())
 app.use(cors());
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
-mongoose.connect('mongodb+srv://rakeshreddy:qwertyuiop@cluster0.qv06xju.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect(process.env.MONGO_URL || 'mongodb+srv://rakeshreddy:qwertyuiop@cluster0.qv06xju.mongodb.net/?retryWrites=true&w=majority')
    .then(() => {
     app.listen(PORT, () => {
         console.log(`Server is running on port ${PORT}`);
